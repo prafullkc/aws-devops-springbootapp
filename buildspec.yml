@@ -11,7 +11,7 @@ phases:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 612555043829.dkr.ecr.us-east-1.amazonaws.com
       - # Replace with this to your repository URI
       #- REPOSITORY_URI=300970304431.dkr.ecr.us-east-1.amazonaws.com/awsdevopsrepo
-      - 612555043829.dkr.ecr.us-east-1.amazonaws.com/prafecr/repo001
+      - REPOSITORY_URI=612555043829.dkr.ecr.us-east-1.amazonaws.com/prafecr/repo001
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
